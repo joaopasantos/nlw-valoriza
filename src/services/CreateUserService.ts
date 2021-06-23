@@ -13,7 +13,7 @@ class CreateUserService {
         const userRepository = getCustomRepository(UserRepositories);
 
         if (!email) {
-            throw new Error("Blank e-mail field not allowed.");
+            throw new Error("Blank E-mail field not allowed.");
         }
 
         const userAlreadyExists = await userRepository.findOne({ email });
